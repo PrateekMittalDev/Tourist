@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourist Data</title>
+    <link rel="stylesheet" href=".\CSS\styles.css" />
+  </head>
+  <body onload="showUserAccess()">
+    <div id="container1">
+      <h1>Tourist List</h1>
+      <p>Click the following button to operate</p>
+      <br />
+      <div class="buttons">
+        <button class="btn" id="showButton" onclick="showData( )">
+          Show Data
+        </button>
+        <br />
+        <button
+          type="submit"
+          class="btn"
+          id="insertButton"
+          onclick="addData( )"
+        >
+          Insert Data
+        </button>
+        <br />
+        <button
+          type="submit"
+          class="btn"
+          id="updateButton"
+          onclick="updateData( )"
+        >
+          Update Data
+        </button>
+        <br />
+        <button
+          type="submit"
+          class="btn"
+          id="deleteButton"
+          onclick="deleteData( )"
+        >
+          Delete Data
+        </button>
+        <br />
+      </div>
+    </div>
+    <div id="tableContainer">
+      <h3>Tourist Table:</h3>
+      <div id="container2"></div>
+    </div>
+    <div id="container3">
+      <form id="touristInputForm" action="submit">
+        <label for="id">Tourist Id </label><br />
+        <input type="text" id="id" name="id" /><br />
+        <label for="name">Tourist Name </label><br />
+        <input type="text" id="name" name="name" /><br />
+        <label for="email">Tourist Email </label><br />
+        <input type="email" id="email" name="email" /><br />
+        <label for="location">Tourist Location </label><br />
+        <input type="text" id="location" name="location" /><br />
+      </form>
+      <div id="searchTourist">
+        <label for="location" id="searchTouristLabel">Search Tourist </label>
+        <input
+          type="text"
+          id="searchTouristText"
+          name="location"
+          placeholder="Tourist Id..."
+        /><br />
+        <button type="submit" id="submitSearch" onclick="highlightData()">
+          Search
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

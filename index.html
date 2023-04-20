@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href=".\CSS\formStyles.css" />
+  </head>
+  <body>
+    <form id="signUpForm" class="dataForm">
+      <h1>Sign Up</h1>
+      <label for="signUpEmail">Email</label><br />
+      <input
+        type="email"
+        id="signUpEmail"
+        name="signUpEmail"
+        placeholder=" Email..."
+        required
+      />
+      <label for="signUpPassword">Password</label><br />
+      <input
+        type="password"
+        id="signUpPassword"
+        name="signUpPassword"
+        placeholder=" Password..."
+        required
+      />
+      <label for="confirmPassword">Confirm Password</label><br />
+      <input
+        type="password"
+        id="confirmPassword"
+        name="cofirmPassword"
+        placeholder=" Confirm Password..."
+        required
+      />
+      <div id="radioDiv">
+        <label for="user">Admin</label>
+        <input type="radio" id="admin" name="userRole" value="Admin" required />
+        <label for="userRole">User</label>
+        <input type="radio" id="user" name="userRole" value="User" />
+      </div>
+      <button
+        class="signSubmit"
+        id="signUpButton"
+        type="submit"
+        id="signUpSubmit"
+        onclick="signupfunc()"
+      >
+        Sign Up
+      </button>
+      <a href=".\sigIn.html">Sign In</a>
+    </form>
+    <script src=".\script.js"></script>
+  </body>
+</html>
