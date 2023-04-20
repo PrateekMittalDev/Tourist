@@ -109,11 +109,9 @@ function showData() {
 
   var response = fetch(url);
   var jsonData;
+  console.log("hllo");
   response
-    .then((tourist) => {
-      tourist.json();
-      console.log("hllo");
-    })
+    .then((tourist) => tourist.json())
     .then((tourist) => {
       jsonData = tourist.data;
       console.log(jsonData);
